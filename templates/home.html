@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 130px;
+    border-radius: 4px;
+    font-family:arial;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    width: 100px;
+}
+
+.button2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+</style>
+
+<body>
+
+<h1 style="text-align:center; font-family:verdana; color:Orange;">.: DEVNAGARI TRANSLITERATION :.</h1>
+
+<br />
+<form style="text-align:center;" action="{% url 'translate' %}" >
+	<p style="color:#4CAF50; font-size: 15px; font-family:arial; "><b>Enter English Text : </b><input type="text" name="originaltext"  size="30" /></p>
+	<br />
+
+	<input  class="button button1" type="submit" value="Transliterate"  />
+	<a href="{% url 'about' %}" class="button button2">About</a>
+	
+</form>
+
+</body>
+</html>
